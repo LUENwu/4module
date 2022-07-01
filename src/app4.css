@@ -1,0 +1,27 @@
+#app4{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#app4 .circle{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+ border: 1px solid black;
+  transition: 1s;
+}
+
+#app4 .circle.active{
+  animation: 3s change infinite reverse linear;
+}
+@keyframes change{
+  0%{
+    background: red;
+  }
+  50%{
+    background: blue;
+  }
+  100%{
+    background: green;
+  }
+}

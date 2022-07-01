@@ -1,0 +1,116 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+*::after,*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,ol{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+.page{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
+  
+}
+.page > section{
+  width: 50vw;
+  height: 50vh;
+  outline: 1px solid blue;
+  
+}
+#app1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+  width: 50vw;
+  height: 50vh;
+}
+#app1 .result{
+  margin: 20px 0 0 10px;
+  font-size: 30px;
+  font-weight: 500;
+}
+#app1 .calculate button{
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  padding:8px;
+}
+
+#app2 .tab-bar{
+  display: flex;
+  text-align: center;
+}
+#app2 .tab-bar li{
+  outline: 1px solid green;
+  flex-grow: 1;
+}
+#app2 .content li{
+  display: none;
+}
+#app2 .content li.active{
+  display: block;
+}
+#app2 .tab-bar li.active{
+  background-color: grey;
+  color: white;
+}
+#app3{
+  display: flex;
+  align-items: center;
+ 
+}
+#app3 .square{
+  margin-left: 150px;
+  border: 1px solid red;
+  width: 10vw;
+  height: 10vh;
+  transition: 1s linear;
+  caret-color: transparent;
+  /* caret-color:transparent 去除点击组件里的光标 */
+}
+#app3 .square.active{
+transform:translateX(15vw)
+}
+#app4{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#app4 .circle{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+ border: 1px solid black;
+  transition: 1s;
+}
+
+#app4 .circle.active{
+  animation: 3s change infinite reverse linear;
+}
+@keyframes change{
+  0%{
+    background: red;
+  }
+  50%{
+    background: blue;
+  }
+  100%{
+    background: green;
+  }
+}
+
+/*# sourceMappingURL=/main.1f19ae8e.css.map */
